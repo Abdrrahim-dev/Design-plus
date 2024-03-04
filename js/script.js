@@ -8,3 +8,20 @@ bars.addEventListener("click", function () {
     ".icon.active"
   ).innerHTML = `<i class="fa-solid fa-xmark"></i>`;
 });
+//
+let portfolioCard = document.querySelectorAll(".portfolio .card");
+let portfolioImg = document.querySelectorAll(
+  ".portfolio .card img:first-of-type"
+);
+portfolioImg.forEach((img) => {
+  img.onclick = function () {
+    img.parentElement.classList.add("active");
+  };
+});
+//
+let exitImg = document.querySelectorAll(".portfolio .card i");
+exitImg.forEach((btn) => {
+  btn.onclick = function () {
+    btn.parentElement.classList.remove("active");
+  };
+});
